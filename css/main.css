@@ -1,0 +1,179 @@
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: system-ui;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Main styles
+   ========================================================================== */
+
+#wrapper {
+  padding: 15px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav {
+  margin-top: 0.67em;
+  width: 33%;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  flex-grow: 1;
+  padding: 10px;
+  margin: 0 2px;
+  text-align: center;
+  border: 1px solid #226;
+  border-radius: 2px;
+}
+
+nav ul li.active {
+  box-shadow: 1px 1px 3px inset #226;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+main {
+  clear: both;
+}
+
+.jumbotron {
+  margin: 30px 50px;
+}
+
+.jumbotron section {
+  margin: 15px 0;
+}
+
+.jumbotron h3 {
+  margin: 20px 0;
+  font-size: 50px;
+}
+
+.jumbotron p {
+  font-size: 25px;
+}
+
+.jumbotron p .button {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #42b;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.services {
+  padding: 0 25px;
+}
+
+.services h1 {
+  text-align: center;
+}
+
+.services .card {
+  margin: 15px;
+  padding: 15px 30px;
+  border: 1px solid #226;
+  box-shadow: 3px 3px 3px #115;
+  border-radius: 2px;
+}
+
+.services .card.vision h3 {
+  font-size: 25px;
+}
+.services .card.vision p {
+  font-size: 20px;
+}
+
+.contact {
+  padding: 0 25px;
+  text-align: center;
+}
+
+footer {
+  margin: 0 -10px;
+  background-color: #225;
+  color: #fff;
+  padding: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.row div {
+  flex-basis: 33%;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+@media only screen and (max-width: 65em) {
+  /* Style adjustments for viewports that meet the condition */
+  .row {
+    display: block;
+  }
+}
