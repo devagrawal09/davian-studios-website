@@ -1,18 +1,9 @@
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
   font-family: system-ui;
-}
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
 }
 
 ::selection {
@@ -48,12 +39,9 @@ textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
-   Main styles
-   ========================================================================== */
-
 #wrapper {
   padding: 15px;
+  padding-bottom: 0;
 }
 
 header {
@@ -64,7 +52,7 @@ header {
 
 header h1 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 nav {
@@ -76,23 +64,31 @@ nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
+  padding: 0;
 }
 
 nav ul li {
   flex-grow: 1;
-  padding: 10px;
   margin: 0 2px;
   text-align: center;
-  border: 1px solid #226;
+  border: 1px solid #77a;
   border-radius: 2px;
 }
 
 nav ul li.active {
-  box-shadow: 1px 1px 3px inset #226;
+  box-shadow: 1px 1px 2px inset #77a;
 }
 
 nav ul a {
+  display: block;
   text-decoration: none;
+  padding: 10px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+nav ul a:hover {
+  background-color: rgba(119, 119, 170, 0.3);
 }
 
 main {
@@ -100,11 +96,34 @@ main {
 }
 
 .jumbotron {
-  margin: 30px 50px;
+  height: 500px;
+  color: #fff;
 }
 
-.jumbotron section {
-  margin: 15px 0;
+.jumbotron div {
+  margin: -15px;
+}
+
+.jumbotron .background {
+  z-index: -1;
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-image: url("https://www.forbesindia.com/media/images/2019/May/img_116543_tech_startup.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+}
+
+.jumbotron .foreground {
+  margin-top: 50px;
+  padding: 30px 50px;
+}
+
+.jumbotron.normal {
+  color: #113;
+  height: auto;
 }
 
 .jumbotron h3 {
@@ -119,7 +138,7 @@ main {
 .jumbotron p .button {
   text-decoration: none;
   padding: 10px 15px;
-  background-color: #42b;
+  background-color: #55f;
   color: #fff;
   border-radius: 5px;
 }
@@ -147,6 +166,37 @@ main {
   font-size: 20px;
 }
 
+.services .card.hal h3 {
+  font-size: 25px;
+}
+.services .card.hal p {
+  font-size: 20px;
+}
+.services .card.hal table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  margin: 0;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+}
+
+tr {
+  transition: 0.2s;
+}
+
+tr:hover {
+  background-color: #eef;
+}
+
+thead th {
+  background-color: #226;
+  color: #fff;
+}
+
 .contact {
   padding: 0 25px;
   text-align: center;
@@ -167,13 +217,101 @@ footer {
   flex-basis: 33%;
 }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
+img.logo {
+  width: 33%;
+}
+
+.video {
+  width: 560px;
+  height: 315px;
+}
 
 @media only screen and (max-width: 65em) {
-  /* Style adjustments for viewports that meet the condition */
+  header {
+    display: block;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav li a {
+    background-color: rgba(119, 119, 170, 0.7);
+  }
+
+  .jumbotron {
+    height: 400px;
+  }
+
+  .services {
+    padding: 0;
+  }
+  
   .row {
     display: block;
   }
+
+  img.logo {
+    width: 50%;
+  }
+
+  .video {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  header nav ul {
+    display: block;
+  }
+
+  nav ul li {
+    margin-bottom: 2px;
+  }
+
+  .jumbotron .background {
+    height: 100vh;
+  }
+
+  .jumbotron .foreground {
+    padding: 15px 25px;
+  }
+
+  .jumbotron h3 {
+    margin: 0;
+    font-size: 30px;
+  }
+  
+  .jumbotron p {
+    font-size: 20px;
+  }
+
+  img.logo {
+    width: 100%;
+  }
+
+  th, td {
+    font-size: 1em;
+  }
+
+  .services .card.vision h3 {
+    font-size: 1.2em;
+  }
+  .services .card.vision p {
+    font-size: 1em;
+  }
+
+  .services .card.hal h3 {
+    font-size: 1.2em;
+  }
+  .services .card.hal p {
+    font-size: 1em;
+  }
+
+  /* .services .card h3 {
+    font-size: 1em;
+  }
+  .services .card p {
+    font-size: 0.8em;
+  } */
 }

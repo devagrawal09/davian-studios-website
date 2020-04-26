@@ -3,12 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home | Davian Studios</title>
+  <title>Company | Davian Studios</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="img/logo.png">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -34,15 +33,19 @@
 
     <main>
       <section class="jumbotron">
-        <h3>Company</h3>
-        <p>
-          We develop automated applications and systems for any business case <br> <br>
-          <a href="" class="button">See our work in action</a>
-        </p>
+        <div class="background"></div>
+        <div class="foreground">
+          <h3>Company</h3>
+          <p>
+            We develop automated applications and systems for any business case <br> <br>
+            <a href="" class="button">See our work in action</a>
+          </p>
+        </div>
       </section>
       <section class="services">
         <h1>Our Vision</h1>
         <div class="card vision">
+          <img src="img/logo.png" alt="Davian Studios logo" class="logo">
           <h3>An Automated Future</h3>
           <p>
             We believe in a future where any work that is done repetetively is automated and handled by machines, so the people can realize their true potential of creativity, which is not possible if they are stuck behind a desk that makes them do the same thing over and over. We want people to go where their human touch is required, while computers take care of everything else. Through Davian Studios, we help organizations automate their business flow so that they can focus on their interaction with the outside world as much as possible. <br>
@@ -91,14 +94,32 @@
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="services">
         <h1>Contact Us</h1>
-        <p>
-          Davian Studios <br>
-          Magic Street, Cincinnati, OH - 45569 <br>
-          contact@davianstudios.com <br>
-          +1-513-999-9999
-        </p>
+        <div class="card">
+          <h3>Fill this form to reach out to us, and we will call you!</h3>
+          <form action="" method="POST">
+            <label for="name">
+              Name: <input type="text" name="name">
+            </label> <br> <br>
+            <label for="phone">
+              Phone: <input type="text" name="phone" required>
+            </label> <br> <br>
+            <label for="email">
+              Email *: <input type="text" name="email" required>
+            </label> <br> <br>
+            <label for="message">
+              Message *: <textarea name="message" required></textarea>
+            </label> <br> <br>
+            <button type="submit">Submit</button>
+          </form>
+          <p>
+            Davian Studios <br>
+            Magic Street, Cincinnati, OH - 45569 <br>
+            <a href="mailto:contact@davianstudios.com">contact@davianstudios.com</a> <br>
+            +1-513-999-9999
+          </p>
+        </div>
       </section>
     </main>
 
